@@ -7,13 +7,15 @@ Created on Fri Jun 26 23:00:33 2020
 
 import pandas as pd
 import numpy as np
-dir_ = r'D:\data_compete\dacon\dacon_jeju-credit-card_old\\'
+dir_ = r'D:\data_compete\dacon\data\jeju-credit-card\\'
 df = pd.read_csv(dir_ + "201901-202003.csv", dtype=str)
 sub_df = pd.read_csv(dir_ + "submission.csv")
 sub_df[["REG_YYMM","CARD_SIDO_NM","STD_CLSS_NM"]].duplicated().sum()
 
 
 #%%
+
+df
 
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
